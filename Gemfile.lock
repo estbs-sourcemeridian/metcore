@@ -47,6 +47,9 @@ GEM
     activerecord (6.1.4.6)
       activemodel (= 6.1.4.6)
       activesupport (= 6.1.4.6)
+    activerecord-sqlserver-adapter (6.1.2.1)
+      activerecord (~> 6.1.0)
+      tiny_tds
     activestorage (6.1.4.6)
       actionpack (= 6.1.4.6)
       activejob (= 6.1.4.6)
@@ -79,6 +82,9 @@ GEM
     childprocess (4.1.0)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubi (1.10.0)
     ffi (1.15.5)
     globalid (1.0.0)
@@ -175,6 +181,7 @@ GEM
     sqlite3 (1.4.2)
     thor (1.2.1)
     tilt (2.0.10)
+    tiny_tds (2.1.5)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -205,9 +212,11 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
+  activerecord-sqlserver-adapter
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  dotenv-rails
   jbuilder (~> 2.7)
   listen (~> 3.3)
   puma (~> 5.0)
@@ -217,6 +226,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   sqlite3 (~> 1.4)
+  tiny_tds
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
